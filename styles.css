@@ -1,0 +1,236 @@
+/* Shared navigation: centered, horizontal, and without list markers */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eef3f9;
+  color: #18283d;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+.site-header {
+  background: #112c4d;
+  padding: 1rem;
+}
+
+.site-header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header nav a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.4rem;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible {
+  background: #2464a0;
+}
+
+.page-content {
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 2rem rgba(16, 40, 70, 0.1);
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+.site-footer {
+  padding: 1.5rem;
+  text-align: center;
+  color: #4a5c73;
+}
+
+/* Home: fluid width layout */
+.home-page .page-content {
+  width: 88%;
+  max-width: 70rem;
+}
+
+/* Style 1: Home heading */
+.home-page h1 {
+  color: #123d6b;
+  font-size: 2.5rem;
+}
+
+/* Style 2: Home section headings */
+.home-page h2 {
+  border-left: 0.35rem solid #1c8e9e;
+  padding-left: 0.8rem;
+}
+
+/* Style 3: Home portrait */
+.home-page .feature-image {
+  width: 22rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.16);
+}
+
+/* Style 4: Home paragraphs */
+.home-page p {
+  font-size: 1.05rem;
+  max-width: 65ch;
+}
+
+/* Style 5: Home lists */
+.home-page .page-content ul {
+  background: #eaf6f6;
+  padding: 1rem 1rem 1rem 2.5rem;
+  border-radius: 0.75rem;
+}
+
+/* Style 6: Home soccer video */
+.home-page video {
+  width: 30rem;
+  border-radius: 0.75rem;
+}
+
+/* Resume: fixed-width layout */
+.resume-page .page-content {
+  width: 800px;
+  max-width: calc(100% - 2rem);
+}
+
+/* Style 1: Resume name */
+.resume-page h1 {
+  color: #143b65;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+/* Style 2: Resume section headings */
+.resume-page h2 {
+  color: #175c83;
+  border-bottom: 2px solid #b9d4e6;
+  padding-bottom: 0.3rem;
+}
+
+/* Style 3: Resume image */
+.resume-page .feature-image {
+  width: 15rem;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 50%;
+}
+
+/* Style 4: Resume subsection headings */
+.resume-page h3 {
+  color: #30465e;
+  margin-bottom: 0.3rem;
+}
+
+/* Style 5: Resume lists */
+.resume-page .page-content li {
+  padding: 0.15rem 0;
+}
+
+/* Style 6: Resume paragraphs */
+.resume-page p {
+  margin-top: 0.4rem;
+}
+
+/* Personal career page: fluid width layout */
+.career-page .page-content {
+  width: 85%;
+  max-width: 68rem;
+}
+
+/* Style 1: Career title */
+.career-page h1 {
+  color: #173b68;
+  font-size: 2.3rem;
+}
+
+/* Style 2: Career section headings */
+.career-page h2 {
+  color: #136e79;
+  border-bottom: 2px solid #d3e9eb;
+  padding-bottom: 0.35rem;
+}
+
+/* Style 3: Career image */
+.career-page .career-image {
+  width: 19rem;
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  border-radius: 0.8rem;
+}
+
+/* Style 4: Career lists */
+.career-page .page-content ul {
+  background: #f0f6fc;
+  padding: 1rem 1rem 1rem 2.5rem;
+  border-left: 0.3rem solid #237f99;
+}
+
+/* Style 5: Career paragraphs */
+.career-page p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+/* Style 6: Career subsection headings */
+.career-page h3 {
+  color: #27517a;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 40rem) {
+  .page-content {
+    padding: 1.25rem;
+  }
+
+  .home-page .page-content,
+  .career-page .page-content {
+    width: 94%;
+  }
+
+  .career-page .career-image {
+    float: none;
+    display: block;
+    margin: 1rem 0;
+  }
+}
+
+/* Project 3: homepage responsive layouts using min-width queries */
+@media (min-width: 40rem) {
+  .home-page .page-content { padding: 2.25rem; }
+  .home-page h1 { font-size: 2.4rem; }
+  .home-page .feature-image { max-width: 24rem; }
+  .home-page .page-content p { font-size: 1.05rem; }
+}
+@media (min-width: 64rem) {
+  .home-page .page-content { max-width: 68rem; padding: 3rem; }
+  .home-page h1 { font-size: 2.8rem; }
+  .home-page .feature-image { max-width: 30rem; }
+  .home-page .page-content p { line-height: 1.9; }
+}
+/* Project 3: Google Maps page */
+.map-page .page-content { width: 92%; max-width: 70rem; }
+#map { width: 100%; height: 26rem; border-radius: 0.75rem; background: #dce8f2; }
+.map-controls { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0; }
+.map-controls button { padding: 0.75rem 1rem; background: #175c83; color: white; border: 0; border-radius: 0.4rem; cursor: pointer; }
+.map-controls button:hover, .map-controls button:focus-visible { background: #112c4d; }
+#map-status { min-height: 1.5rem; }

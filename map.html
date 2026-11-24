@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Huthef Abdirizak - Google Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&amp;callback=initMap" async></script>
+  </head>
+  <body class="map-page">
+    <header class="site-header">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Homepage</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="page3.html">Cybersecurity Career</a></li>
+          <li><a href="map.html">Google Map</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-content">
+      <h1>Explore Chicago on Google Maps</h1>
+      <p>This interactive map highlights Chicago, Illinois. Click the marker for more information, zoom in or out, or change the map type.</p>
+      <div id="map" aria-label="Interactive Google Map centered on Chicago"></div>
+      <p id="map-status" role="status">Loading the Google Map. If it does not appear, check your browser console and the Google Maps API key.</p>
+      <div class="map-controls">
+        <button id="chicago-button" type="button">Reset Map to Chicago</button>
+        <button id="questions-button" type="button">Questions?</button>
+      </div>
+    </main>
+    <footer class="site-footer">Huthef Abdirizak | Web Development Project 3</footer>
+  </body>
+</html>
